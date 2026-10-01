@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Estudante</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5 p-4 bg-light" style="border-radius: 10px; max-width: 600px;">
+        <h2 class="text-center mb-4">Adicionar Novo Estudante</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success btn-block">Salvar Estudante</button>
+            <a href="/" class="btn btn-secondary btn-block">Voltar</a>
+        </form>
+    </div>
+</body>
+</html>
